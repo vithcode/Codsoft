@@ -35,7 +35,7 @@ nav img{
     text-decoration: none;
     font-size: 13px;
 }
-.nav-links ul li::after{
+.nav-links ul li:after{
     content: '';
     width: 0%;
     height: 2px;
@@ -44,7 +44,7 @@ nav img{
     margin: auto;
     transition: 0.5s;
 }
-.nav-links ul li:hover:after{
+.nav-links ul li:hover::after{
     width: 100%;
 
 }
@@ -66,7 +66,7 @@ nav img{
     color: #fff;
 }
 .hero-btn {
-    display: inline;
+    display: inline-block;
     text-decoration: none;
     color:#fff;
     border: 1px solid #fff;
@@ -85,14 +85,22 @@ nav .fa{
     display: none;
 }
 @media(max-width: 700px){
-     body{
-         overflow-x:hidden;
-     }
+    /* body{
+        overflow-x: hidden;
+    } */
+    .header {
+        overflow-x: hidden;
+    }
+
     .text-box h1{
         font-size: 20px;
+        
+        
     }
+    
     .nav-links ul li{
         display: block;
+        
     }
     .nav-links{
         position: absolute;
@@ -104,6 +112,7 @@ nav .fa{
         text-align: left;
         z-index:2;
         transition: 1s;
+        
     }
     nav .fa{
         display: block;
@@ -111,10 +120,14 @@ nav .fa{
         margin: 10px;
         font-size: 22px;
         cursor: pointer;
+        
     }
-    .nav-link ul{
+    .nav-links ul{
         padding: 30px;
+    
+        
     }
+    
 }
 /* ------Course------- */
 .course{
@@ -158,8 +171,11 @@ h3{
 }
 @media(max-width: 700px){
     .row{
-        flex-direction: column;
+        flex-direction:column;
     }
+  /* .course .facilities .footer{
+        overflow-x: hidden;
+    } */
 }
 /* ----------Campus------- */
 .campus{
